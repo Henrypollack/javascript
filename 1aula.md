@@ -14,3 +14,16 @@ variavel = 20;
 ```
 const pi = 3,14;
 ```
+- Caso o resultado de um algoritmo de com muitas casas decimais temos que converter o resultado pra texto.
+Usando o `toFixed`podemos fazer isso.
+```
+console.log("O seu carro gastou R$: ",gasto.toFixed(2));
+```
+- O console vai mostrar isso:
+```
+O seu carro gastou R$:  762.35
+```
+- ao inves disso:
+```
+O seu carro gastou R$:  762.3499999999999
+```
