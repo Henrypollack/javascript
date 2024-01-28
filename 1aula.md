@@ -87,5 +87,7 @@ if (numero === 0) {
 }
 ```
 - Ficando assim primeiro vemos se o numero é igual a zero caso ele seja apresentamos a primeira mensagem, se nao for e ele for par ai apresentamos a segunda mensagem caso nao seja vamos pra terceira mensagem.
+ - No JavaScript usamo os `&&` pra usar a função `AND`o famoso `E` 
+
 
 
