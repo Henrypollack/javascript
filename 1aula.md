@@ -34,12 +34,13 @@ const souRico = False;
 const souPobre = True;
 ```
 - Temos também os sinais aritmeticos.
+
 |Simbolo|Operação  | Exemplo|
 |-------|----------|--------|
 |     **+** | Soma| 5 + 4 = 9|
 |      **-**| Subtração| 5 - 4 = 1|
 |     **/**|Divisão|  4 / 2 = 2|
-|     **'*'**|Multiplicação| 5 * 4 = 20 |
+|     **'*'**|Multiplicação| 5 * 4 = 20| 
 |      **%**|Resto de Divisão| 21 % 4 = 1|
 |   **' ** '**|Expoente| 2 * * = 4|
 
