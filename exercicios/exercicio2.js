@@ -8,17 +8,21 @@
 */
 const altura = 1.75;
 const peso = 145;
-let IMC = peso / (altura * altura);
-if (IMC < 18.5){
-    console.log('Voce esta abaixo do peso!');
-} else if (IMC > 18.5 && IMC < 25) {
-    console.log('Peso normal!');
-} else if (IMC > 25 && IMC < 30){
-    console.log('Acima do peso');
-} else if (IMC > 30 && IMC < 40){
-    console.log('Voce esta OBESO');
-} else if (IMC > 40){
-    console.log('Obesidade grave');
+function calcularIMC (peso,altura){
+    return peso / (altura * altura);
 }
-
+const IMC = calcularIMC(peso,altura);
+function classificarIMC (IMC){
+if (IMC < 18.5){
+    return ('Voce esta abaixo do peso!');
+} else if (IMC > 18.5 && IMC < 25) {
+    return ('Peso normal!');
+} else if (IMC > 25 && IMC < 30){
+    return ('Acima do peso');
+} else if (IMC > 30 && IMC < 40){
+    return ('Voce esta OBESO');
+} else if (IMC > 40){
+    return ('Obesidade grave');
+}
+}
 console.log(IMC.toFixed(2));
