@@ -6,6 +6,7 @@
 - entre 30 e 40 obeso;
 - acima de 40 obesidade grave;
 */
+(function main () {
 const altura = 1.75;
 const peso = 145;
 function calcularIMC (peso,altura){
@@ -25,4 +26,6 @@ if (IMC < 18.5){
     return ('Obesidade grave');
 }
 }
-console.log(IMC.toFixed(2));
+console.log(classificarIMC(IMC));
+})();
+
