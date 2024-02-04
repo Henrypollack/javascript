@@ -126,3 +126,140 @@ pessoa.descrever = function(){
 Meu nome é Heitor
 ```
 - Nesse caso ao invez da função do objeto trazer idade e nome vai trazer só a idade pois reatribuimos a sua função sobrescrevendo ela novamente.
+- Podemos também acessar esses valores com uma sintaxe mais dinamica como no exemplo abaixo:
+###### Comando digitado
+```
+const pessoa  = {
+    nome: 'Henry Pollack',
+    idade: 25,
+    nivelDoCharNoTibia: 248,
+    descrever: function () {
+        console.log(`Meu nome é ${this.nome} e minha idade é ${this.idade}`);
+    }
+};
+pessoa.descrever = function(){
+    console.log(`Meu nome é ${this.nome}`)
+}
+const atributo = 'idade';
+console.log(pessoa['idade']);
+```
+###### O que vai aparecer no console
+```
+25
+```
+- Note que chamamos a idade com uma string e conseguimos referenciar mesmo assim, pois ela possui o mesmo nome do identificador.
+- note também que no `console.log` citamos o objeto `pessoa` e dentro do colchetes `[]` colocamos a string que e identica ao identificador idade poderia ser assim tbm:
+###### Comando digitado
+```
+const pessoa  = {
+    nome: 'Henry Pollack',
+    idade: 25,
+    nivelDoCharNoTibia: 248,
+    descrever: function () {
+        console.log(`Meu nome é ${this.nome} e minha idade é ${this.idade}`);
+    }
+};
+pessoa.descrever = function(){
+    console.log(`Meu nome é ${this.nome}`)
+}
+const atributo = 'idade';
+console.log(pessoa['nome']);
+```
+###### O que vai aparecer no console
+```
+Henry Pollack
+```
+- Colocamos que queremos o `nome` e ele vai chamar o nome, assim deixamos o as coisas dinamicas dentro do nosso codigo entao se eu precisar acessar um atributo que nao sei o nome dele posso usar esse nome como parametro.
+#### Classe e Instancias 
+- Classes guardam identificadores de por exemplo uma pessoa (_nome,idade_) de um carro (_cor,marca_), diferente do objeto acima que criamos que colocamos literalmente uma pessoa, 1 nome e 1 idade, na classe criamos algo que possa ser mais abrangente.
+Nas classes temos as `Instâncias` que são como por exemplo o objeto que criamos acima. Se criarmos uma classe pessoa e colocar idade, nome e uma função descrever que vai impimir esses dois dados, o nome da pessoa (_Henry_) e a idade (_30_) seão as `Instâncias` dessa classe, veja melhor isso no exemplo abaixo:
+###### Comando digitado
+```
+class Pessoa {
+    nome;
+    idade;
+    charNoTibia;
+
+    descrever(){
+        console.log(`Meu nome é ${this.nome} e minha idade é ${this.idade}`);
+    }
+}
+
+const henry = new Pessoa();
+henry.nome = 'Henry Pollack';
+henry.idade = 30;
+henry.charNoTibia = 'Merdoxhero';
+
+const filho = new Pessoa();
+filho.nome = 'Heitor de Oliveira';
+filho.idade = 0.9;
+filho.charNoTibia = 'Milarra Luda';
+
+console.log(henry);
+console.log(heitor);
+```
+###### O que vai aparecer no console
+```
+Pessoa { nome: 'Henry Pollack', idade: 30, charNoTibia: 'Merdoxhero' }
+Pessoa {
+  nome: 'Heitor de Oliveira',
+  idade: 0.9,
+  charNoTibia: 'Milarra Luda'
+}
+```
+- Explicando o exemplo acima, criamos entao o conceito pro JavaScript o que é uma pessoa ela tem idade nome e um personagem no tibia kkkk.
+Perceba que para podermos usar a classe que criamos usamos entao o `const` com a variavel referente a pessoa e depois adcionamos o `new` + `nome da classe` seguido por `();` e depois vamos adcionando os atributos da pessoa.
+- A classe acaba sendo isso e como o objeto deve ser e as Instancias são as caracteriticas. 
+- Podemos chamar uma função criada dentro da classe assim como fazemos quando criamos uma dentro de um objeto como no exemplo abaixo:
+###### Comando digitado
+```
+    nome;
+    idade;
+    charNoTibia;
+
+    descrever(){
+        console.log(`Meu nome é ${this.nome} e minha idade é ${this.idade}`);
+    }
+}
+henry.descrever();
+heitor.descrever();
+```
+###### O que vai aparecer no console
+```
+Meu nome é Henry Pollack e minha idade é 30
+Meu nome é Heitor de Oliveira e minha idade é 0.9
+```  
+#### Criando Instâncias com Construtor
+- Quando criamos as classes acima vimos que nao era obrigatorio colocar todas Instâncias do objeto, para que seja obrigatorio por exemplo que o objeto pessoa sempre tenha um nome e uma idade usamos o `construtor(){}`, nele podemos defenir quais Instâncias desejamos que sempre apareçam quando formos criar um novo objeto.
+Veja o exemplo abaixo:
+###### Comando digitado
+```
+class Pessoa {
+    nome;
+    idade;
+    NoTibia;
+    constructor(nome,idade,charNoTibia){
+        this.nome = nome;
+        this.idade = idade;
+        this.NoTibia = charNoTibia;
+        this.anoNascimento = 2024 - idade;
+    }
+
+    descrever(){
+        console.log(`Meu nome é ${this.nome} e minha idade é ${this.idade}`);
+    }
+}
+const henry = new Pessoa('Henry Pollck',30,'Merdoxhero');
+const filho = new Pessoa('Heitor',0.9,'Milarra Luda');
+
+console.log(henry);
+console.log(filho);
+```
+###### O que vai aparecer no console
+```
+Pessoa { nome: 'Henry Pollck', idade: 30, NoTibia: 'Merdoxhero' anoNascimento: 1994 }
+Pessoa { nome: 'Heitor', idade: 0.9, NoTibia: 'Milarra Luda' anoNascimento: 2023.1 }
+```
+- Explicando no `construtor` iremos colocar o nome das Instâncias que sempre irão aparecer quando formos criar um novo objeto nesse caso pessoa, colocamos isso dentro do `()`.
+- Depois vamos usar o `this` pra dizer pro JavaScript o que necessariamente o que colocamos entre `()`no `construtor` se referencia, veja que na Instâncias `charNoTibia`eu mudei para `NoTibia`apenas pra deixar isso claro.
+- Perceba também que podemos adcionar também uma Instâncias que nao seja obrigatoria mais ela vai aparecer em todo os objetos do contrutor .
