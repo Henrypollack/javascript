@@ -2,6 +2,7 @@
 # DIO| 3ª Aula JavaScript
 ![alt text](https://i.imgur.com/R9X42o2.png)
 ## Estrutura Básica de Um Objeto
+
 - Um objeto pode ser um `console.log` ou um `const variavel = {}` repare que usamos `{}`para chamar um objeto. 
 - Um objeto no JavaScript e uma coleção dinamica de chave e valores e ele funciona com `{}`e valor como no exemplo abaixo:
 ```
@@ -35,7 +36,7 @@ console.log(henry);
 ```
 { nome: 'Henry Pollack', idade: 25, nivelDoCharNoTibia: 248 }
 ``` 
-#### Incrementando um Objeto.
+### Incrementando um Objeto.
 
 - Podemos **_incrementar_** ou seja colocar mais coisas no bojeto citando ele e colocando um `.`e depois o atributo que queremos que ele receba como no exemplo abaixo. 
 ###### Comando digitado
@@ -60,7 +61,7 @@ delete henry.nome;
 ```
 { idade: 25, nivelDoCharNoTibia: 248, altura: 1.76 }
 ```
-#### Criando métodos para objetos.
+### Criando métodos para objetos.
 - Podemos criar metodos pros objetos que são funções dentro de objetos. Uma função dentro de um objeto chamamos de metodo.
 Podemos usar na função as variaveis que estao dentro do objeto.
 
@@ -170,7 +171,7 @@ console.log(pessoa['nome']);
 Henry Pollack
 ```
 - Colocamos que queremos o `nome` e ele vai chamar o nome, assim deixamos o as coisas dinamicas dentro do nosso codigo entao se eu precisar acessar um atributo que nao sei o nome dele posso usar esse nome como parametro.
-#### Classe e Instancias 
+### Classe e Instancias 
 - Classes guardam identificadores de por exemplo uma pessoa (_nome,idade_) de um carro (_cor,marca_), diferente do objeto acima que criamos que colocamos literalmente uma pessoa, 1 nome e 1 idade, na classe criamos algo que possa ser mais abrangente.
 Nas classes temos as `Instâncias` que são como por exemplo o objeto que criamos acima. Se criarmos uma classe pessoa e colocar idade, nome e uma função descrever que vai impimir esses dois dados, o nome da pessoa (_Henry_) e a idade (_30_) seão as `Instâncias` dessa classe, veja melhor isso no exemplo abaixo:
 ###### Comando digitado
@@ -229,7 +230,7 @@ heitor.descrever();
 Meu nome é Henry Pollack e minha idade é 30
 Meu nome é Heitor de Oliveira e minha idade é 0.9
 ```  
-#### Criando Instâncias com Construtor
+### Criando Instâncias com Construtor
 - Quando criamos as classes acima vimos que nao era obrigatorio colocar todas Instâncias do objeto, para que seja obrigatorio por exemplo que o objeto pessoa sempre tenha um nome e uma idade usamos o `construtor(){}`, nele podemos defenir quais Instâncias desejamos que sempre apareçam quando formos criar um novo objeto.
 Veja o exemplo abaixo:
 ###### Comando digitado
@@ -262,4 +263,41 @@ Pessoa { nome: 'Heitor', idade: 0.9, NoTibia: 'Milarra Luda' anoNascimento: 2023
 ```
 - Explicando no `construtor` iremos colocar o nome das Instâncias que sempre irão aparecer quando formos criar um novo objeto nesse caso pessoa, colocamos isso dentro do `()`.
 - Depois vamos usar o `this` pra dizer pro JavaScript o que necessariamente o que colocamos entre `()`no `construtor` se referencia, veja que na Instâncias `charNoTibia`eu mudei para `NoTibia`apenas pra deixar isso claro.
-- Perceba também que podemos adcionar também uma Instâncias que nao seja obrigatoria mais ela vai aparecer em todo os objetos do contrutor .
+- Perceba também que podemos adcionar também uma Instâncias que nao seja obrigatoria mais ela vai aparecer em todo os objetos do contrutor.
+### Funções Recebendo Objetos
+- Agora vamos fazer uma função que compara pessoas.
+```
+function compararPessoas(p1,p2){
+    if (p1.idade > p2.idade){
+        console.log(`${p1.nome} é mais velho(a) que ${p2.nome}`);
+    } else if (p2.idade > p1.idade){
+        console.log(`${p2.nome} é mais velho(a) que ${p1.nome}`);
+    } else {
+        console.log(`${p1.nome} e ${p2.nome} tem a mesma idade.`);
+    }
+}
+```
+- Perceba que criamos uma função e agora ao invez de estarmos usando variaveis estamos usando objetos. No caso ali temos o `nome`e a `idade`.
+No exemplo abaixo fica mais claro. 
+###### Comando digitado
+```
+function compararPessoas(p1,p2){
+    if (p1.idade > p2.idade){
+        console.log(`${p1.nome} é mais velho(a) que ${p2.nome}`);
+    } else if (p2.idade > p1.idade){
+        console.log(`${p2.nome} é mais velho(a) que ${p1.nome}`);
+    } else {
+        console.log(`${p1.nome} e ${p2.nome} tem a mesma idade.`);
+    }
+}
+ const henry = new Pessoa('Henry',30,'Merdoxhero');
+ const esposa = new Pessoa('Andressa',27,'Pele Fusion');
+
+ compararPessoas(henry,esposa)
+
+```
+###### O que vai aparecer no console
+```
+Henry é mais velho(a) que Andressa
+```
+- Explicando o codigo, criamos uma função que quando chamamos ela vai comprar dois objetos entre si, entao perceba que criamos 2 pessoas, colocamos nome e idade e charNoTibia mas na funçao só vamos comparar idade e nome. Entao chamamos a função e colocamos as duas pessoas que criamos agora `henry` vai virar `p1` e `esposa`vai virar `p2` entao a função ira fazer as comprações.E seguir o codigo que programamos.  
