@@ -13,14 +13,30 @@ class Pessoa {
         console.log(`Meu nome é ${this.nome} e minha idade é ${this.idade}`);
     }
 }
-const henry = new Pessoa('Henry Pollck',30,'Merdoxhero');
-const filho = new Pessoa('Heitor',0.9,'Milarra Luda');
 
+function compararPessoas(p1,p2){
+    if (p1.idade > p2.idade){
+        console.log(`${p1.nome} é mais velho(a) que ${p2.nome}`);
+    } else if (p2.idade > p1.idade){
+        console.log(`${p2.nome} é mais velho(a) que ${p1.nome}`);
+    } else {
+        console.log(`${p1.nome} e ${p2.nome} tem a mesma idade.`);
+    }
+}
+ const henry = new Pessoa('Henry',30,'Merdoxhero');
+ const esposa = new Pessoa('Andressa',27,'Pele Fusion');
+
+ compararPessoas(henry,esposa)
+
+
+
+
+
+/*const henry = new Pessoa('Henry Pollck',30,'Merdoxhero');
+const filho = new Pessoa('Heitor',0.9,'Milarra Luda');
 console.log(henry);
 console.log(filho);
-
-
-/*const henry = new Pessoa();
+const henry = new Pessoa();
 henry.nome = 'Henry Pollack';
 henry.idade = 30;
 henry.charNoTibia = 'Merdoxhero';
