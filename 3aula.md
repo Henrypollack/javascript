@@ -300,4 +300,40 @@ function compararPessoas(p1,p2){
 ```
 Henry é mais velho(a) que Andressa
 ```
-- Explicando o codigo, criamos uma função que quando chamamos ela vai comprar dois objetos entre si, entao perceba que criamos 2 pessoas, colocamos nome e idade e charNoTibia mas na funçao só vamos comparar idade e nome. Entao chamamos a função e colocamos as duas pessoas que criamos agora `henry` vai virar `p1` e `esposa`vai virar `p2` entao a função ira fazer as comprações.E seguir o codigo que programamos.  
+- Explicando o codigo, criamos uma função que quando chamamos ela vai comprar dois objetos entre si, entao perceba que criamos 2 pessoas, colocamos nome e idade e charNoTibia mas na funçao só vamos comparar idade e nome. Entao chamamos a função e colocamos as duas pessoas que criamos agora `henry` vai virar `p1` e `esposa`vai virar `p2` entao a função ira fazer as comprações.E seguir o codigo que programamos. #### Uma dica 
+- Para selecionarmos varias linhas no VSCode podemos segurar o `Alt` e selecionar com o mouse no inicio das linhas que vamos interagir, esse comando é util para casos como no exemplo abaixo:
+```
+classificarIMC(){
+        const IMC = this.calcularIMC(); 
+        if (IMC < 18.5){
+            console.log ('Voce esta abaixo do peso!');
+        } else if (IMC > 18.5 && IMC < 25) {
+            console.log ('Peso normal!');
+        } else if (IMC > 25 && IMC < 30){
+            console.log ('Acima do peso');
+        } else if (IMC > 30 && IMC < 40){
+            console.log ('Voce esta OBESO');
+        } else if (IMC > 40){
+            console.log ('Obesidade grave');
+        }
+    }
+```
+- Se preciarmos mudar todos os `console.log` por `return` ao invez de selecionarmos um por um fazmos como dito acima.Ficando assim depois de modificado.
+
+```
+ classificarIMC(){
+        const IMC = this.calcularIMC(); 
+        if (IMC < 18.5){
+            return ('Voce esta abaixo do peso!');
+        } else if (IMC > 18.5 && IMC < 25) {
+            return ('Peso normal!');
+        } else if (IMC > 25 && IMC < 30){
+            return ('Acima do peso');
+        } else if (IMC > 30 && IMC < 40){
+            return ('Voce esta OBESO');
+        } else if (IMC > 40){
+            return ('Obesidade grave');
+        }
+    }
+```
+     
