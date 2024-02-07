@@ -18,3 +18,10 @@ function juros(valor,percentualJuros){
 console.log(juros(100,10));
 console.log(juros(100,15));
 console.log(juros(100,20));
+
+    const dev = {
+        nome: 'Renan',
+        linguagemPreferida: 'JavaScript'
+    };
+
+    console.log(dev.linguagemPreferida);
