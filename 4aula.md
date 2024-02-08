@@ -1,4 +1,4 @@
-# DIO| 4ª Aula JavaScript
+# DIO| 4ª Aula JavaScript ![alt text](https://i.imgur.com/qpcHkD3.png)
 ## Arrays e Estruturas de Repetição
 ### Listas e Arrays
 - Um _array_ é uma coleção de dados em volta de `[]` entao ele pode armazenar string, booleans ou numeros etc...
