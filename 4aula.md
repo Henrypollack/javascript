@@ -70,4 +70,62 @@ console.log(notas.length);
 ```
 5
 ```
-### Estruturas de Repetição
+### Estruturas de Repetição For
+```
+for (let index = 0; index < Array.length; index++){
+    
+}
+```
+- O comando `for`serve pra percorrer uma quantiade espcifica de vezes ou seja é você ou o usuario que determina qwuantas vezes essa repetição vai acontecer,Agora digamos que ao invez de adcionar nota por nota manualmente vamos progrmaar um codigo para fazer isso.
+- O `for` e divido em 3 partes
+#### 1ª Declaração
+- Que diz a quantiade de vezes que vamos executar o codigo.
+```
+for (let index = 0;){
+    
+}
+```
+#### Estrutura Condicional 
+- Que vai dizer se entra ou nao nesse codigo 
+```
+for (index < Array.length;){
+    
+}
+```
+#### Incremento da variavel
+- O que acontece depois de executar o codigo.
+```
+for (index++){
+    
+}
+```
+
+- Começamos com a declaração do ponto de partida poderia ser 1000 ou 500 mas normlamente começamos do `0`, também trocamos normlamente a palavra `index`pela letra `i` por que é o nosso `interable` nosso `index`como veremos abaixo.
+```
+for (let i = 0; i < 10; i++){
+
+}
+```
+
+- Agora vamos usar o for em outro exemplo como no codigo abaixo:
+###### Comando digitado
+```
+const nome = 'Henry Pollack '
+for (let i = 0; i < nome.length; i++){
+    console.log(nome[i]);
+
+}
+```
+###### O que vai aparecer no console
+```
+H  P
+e  o
+n  l
+r  l
+y  a
+   c
+   k
+   /Coloquei do lado para fica mais facil a visualiozação.
+```
+- Explicando o exemplo acima , na primeira parte do codigo dizemos que estamos comecando do indice _0_ ou seja a primeira letra na segunda parte dizemos que o `i ` nao pode ultrapassar a quantiade de letras da string, sabemos a quantiade de letrras da string usando o comando `lenght` e depois dizemos que o `i `ira receber uma adição de contagem a cada vez que executar, entao ele vai escrever uma letra por vez no console cada linha é uma execução do codigo por isso ele escrevu o nome na vertical e nao na horizontal.
+
