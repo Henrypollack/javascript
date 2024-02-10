@@ -7,6 +7,9 @@ notas.push(2);
 notas.push(5);
 
 console.log(notas.length);
+for (let i = 0; i < 10; i++){
+    console.log(i);
+}
 
 
 /*const alunos = ['Jõao','Henry','Maria'];
