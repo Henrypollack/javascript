@@ -1,16 +1,19 @@
 
-const notas = [];
+const notas = 6 [];
 notas.push(5);
 notas.push(7);
 notas.push(8);
 notas.push(2);
 notas.push(5);
-
+notas.push(8);
+let soma = 0;
 console.log(notas.length);
-for (let i = 0; i < 10; i++){
-    console.log(i);
+for (let i = 0; i < notas.length; i++){
+    const nota = notas[i];
+    soma = soma + nota;
 }
-
+const media = soma / notas.length;
+console.log(media)
 
 /*const alunos = ['Jõao','Henry','Maria'];
 console.log(alunos);
