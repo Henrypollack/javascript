@@ -1,5 +1,5 @@
 
-const notas = 6 [];
+const notas = [];
 notas.push(5);
 notas.push(7);
 notas.push(8);
