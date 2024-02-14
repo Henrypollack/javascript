@@ -128,4 +128,36 @@ y  a
    /Coloquei do lado para fica mais facil a visualiozação.
 ```
 - Explicando o exemplo acima , na primeira parte do codigo dizemos que estamos comecando do indice _0_ ou seja a primeira letra na segunda parte dizemos que o `i ` nao pode ultrapassar a quantiade de letras da string, sabemos a quantiade de letrras da string usando o comando `lenght` e depois dizemos que o `i `ira receber uma adição de contagem a cada vez que executar, entao ele vai escrever uma letra por vez no console cada linha é uma execução do codigo por isso ele escrevu o nome na vertical e nao na horizontal.
+### Executando For Para Exibir a Média de notas
+- Como usar o for pra calcular a meida de notas, o professsor pode inserir varias vezes uma nota nova que o nosso codigo vai calcular autoamticamente:
+###### Comando digitado
+```
+
+const notas = [];
+notas.push(5);
+notas.push(7);
+notas.push(8);
+notas.push(2);
+notas.push(5);
+notas.push(8);
+let soma = 0;
+console.log(notas.length);
+for (let i = 0; i < notas.length; i++){
+    const nota = notas[i];
+    soma = soma + nota;
+}
+const media = soma / notas.length;
+console.log(media)
+```
+###### O que vai aparecer no console
+```
+6
+5.833333333333333
+```
+- Explicando o codigo acima, fizemos uma lsta vazia onde sera armazenado os valores ou as notas que os professores vao adcionando usando o comando `notas.push()` assim cada linha que esta escrito isso vai estar adcionando uma nota na lista atraves do comando `push`.
+- Depois criamos uma variasexterna pra soma e dizemosa que ele é `0` pois a lista quando começamos esta sem nota também, ai no for declaramos que o `i` vale zero por que e oi nosso ponto de partida e depois dizemos que enquanto `i` for menor que a `lenght`das notas ou seja a quantiade de notas lançadas continuaremos executando o codigo, e depois dizemos que a cada execução icrementamos `+1` ao `i` .
+- Depois pegamos a `nota` colocamos em uma variavel com a posição da lista que estamos interando.
+- depois colocamos a variavel `soma` para somar cada vez que o codigo for execuado a `nota`.
+- e por ultimo fora dor _for_ vamos criar uma variavel pra calcular a media usando a `soma`e pra sabermos quantos elementmos teremos que dividir usamos o `lenght`como refencia.
+
 
