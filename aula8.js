@@ -1,3 +1,2 @@
-const funcoes = require('./funcoes_aux.js');
-console.log(funcoes.gets());
-
+/*const { gets,print }  = require('./funcoes_aux.js');
+print(gets());*/
