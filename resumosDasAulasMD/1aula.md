@@ -1,4 +1,4 @@
-# DIO| 1ª Aula de JavaScript
+# DIO| 1ª Aula de JavaScript ![al img](https://i.imgur.com/MMG5Ros.png)
 ### Como declarar variaveis
 - Para mostrarmos alguma msg no JavaScript usamos o seguinte comando:
 ```
