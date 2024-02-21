@@ -52,6 +52,7 @@ Agora para podermos usar nossos arquio no html e so usar o elemento `<link>` com
 </body>
 ```
 #### Adicionando a font Roboto no projeto
+![alt img](https://i.imgur.com/Vf0sCua.png)
 
 - Do mesmo jeito que podemos usar o `cdn`para normalizar nossa pagina, podemos usar ele para adcionar estilo ao nosso texto (_muda a fonte do texto_), para isso amos usar o _**Google Fonts**_ , Depois vamos buscar pela fonte `Roboto` e vamos selecionar algumas estilos de fontes, o depois na hora de apertar o botao `download all`podemos abertar o outro botao `view embed code`e la teremos ja o codigo em `CSS`e o nosso codigo pro `CDN`do proprio google.
 Deixando o nosso `<head>` desse jeito:
