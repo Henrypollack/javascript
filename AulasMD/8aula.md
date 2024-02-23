@@ -35,5 +35,58 @@ URL: https://pokeapi.co/api/v2/pokemon?type=grass
 - Explicando a segunda linha caso queiramos mais uma coisa no filtro podemos contatenas usarndo o & ali no exemplo `&name=i`seria pra procurar também nomes que comecem com `i`.
 Assim conseguimos passar argumentos pras buscas.
 ### Headers
+- Se observamos bem temos o _**Request Headers**_ e _**Response Headers**_ que são a configuração da nossa API ou site 
 - São areas de dados que podemos transmitir coisas pro servidor e recber coisas do servidor, os `Headers` normalmente são metadados da nossa requisição são coisas para descrever ou complementar a nossa requisição. 
+- Os `Headers`são uma especie de configuração da nossa requisição.
+### Body e Status Code
+- O `Body`e o corpo da nossa requisição. por exemplo o `GET`nao tem corpo de requisição ele deve funcionar com a URL q  querry e os headers de resquest, agora quando e `POST` sim como no exemplo abaixo:
+###### Comando digitado
+```
+Requisição HTTP 
 
+URL: https://pokeap1.co/api/v2/pokemon 
+${Endereço}/${path = caminho de identificação do recurso) 
+
+Request Method: GET | POST | PUT | DELETE 
+
+Request Headers content-type: application/json 
+
+Body{
+"name:"Teste"
+} 
+```
+- O que vai no `Body`depende do _content type_ que esta no header. E o body pode ter tanto na requisição como na reposta.
+
+### Requisição
+- Uma requisição e composta por `URL`, `Request Method` , `Request Headers`, `Response Headers` como no exemplo abaixo.
+###### Comando digitado
+``` 
+Requisição HTTP
+
+URL: https://pokeapi.co/api/v2/pokemons
+{Endereço}/${path caminho de identificação do recurso}
+
+Request Method: GET | POST | PUT | DELETE
+
+Request Headers
+content-type: application/json
+
+Resquest Body
+{
+"name": "Teste"
+}
+```
+### Response
+- E na parte do servidor vamos ter o `Status Code`, `Response Headers`, `Response Body`.
+###### Comando digitado
+```
+Status Code: 200 OK
+
+Response Headers
+
+Response Body
+```
+
+### Status Code
+- Ele singifica o que aconteceu com a nossa requisição se ela foi processada, ou nao  ou deu errado ou se deu sucesso.
+- A familia `200` (_200-299_) costuma dizer sucesso, a familia `300` (_300-399_) Redirect, a familia `400`(400-499) erro por parte do clinete, a famlia `500`erro por parte do servidor etc.
